@@ -48,7 +48,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
 });
 
-
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 
