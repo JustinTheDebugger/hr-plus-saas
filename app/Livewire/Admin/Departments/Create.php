@@ -12,7 +12,7 @@ class Create extends Component
     public function rules()
     {
         return [
-            'departments' => 'required|string|max:255',
+            'department.name' => 'required|string|max:255',
         ];
     }
 
@@ -24,6 +24,7 @@ class Create extends Component
     public function save()
     {
         $this->validate();
+        $this->department->company_id = session('company_id');
         $this->department->save();
         session()->flash('success', 'Department created successfully.');
 

@@ -9,8 +9,6 @@ class Index extends Component
 {
     public function render()
     {
-        return view('livewire.admin.contracts.index', [
-            'departments' => Department::inCompany()->paginate(5)
-        ]);
+        return view('livewire.admin.contracts.index');
     }
 }
